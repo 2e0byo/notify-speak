@@ -1,0 +1,18 @@
+#+title: Text-to-speak for dbus notifications
+
+A very basic script to intercept dbus notifications and fire them at you with a
+text-to-speech engine.
+
+* Usage
+
+  Edit ~notify_speak.py~ to use the right executable.  Then run.
+
+* Extending
+
+  You likely want only to speak /some/ notifications: perhaps from a certain
+  program, perhaps only if some other conditions obtain.  Python is easy!  Edit as required and implement for your setup.
+
+* Sources
+  https://stackoverflow.com/questions/55374626/how-to-read-notifications-using-d-bus-and-python-3
+
+  Doubtless there's a way with ~pydbus~, but I couldn't figure it out.
