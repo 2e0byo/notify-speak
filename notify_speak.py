@@ -1,3 +1,4 @@
+import html
 from subprocess import run
 
 import dbus
@@ -15,6 +16,7 @@ def speak_notifications(bus, msg):
     msg = msg.get_args_list()[4]
     if not msg:
         msg = summary
+    msg = html.unescape(msg)
     speak(msg)
 
 
