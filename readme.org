@@ -7,6 +7,9 @@ text-to-speech engine.
 
   Edit ~notify_speak.py~ to use the right executable.  Then run.
 
+** Pausing
+   Use standard process control, e.g. ~pkill -STOP notify_speak.py~.
+   
 * Extending
 
   You likely want only to speak /some/ notifications: perhaps from a certain
