@@ -20,7 +20,7 @@ def speak_notifications(bus, msg):
     msg = html.unescape(msg)
     # remove urls as they're annoying
     msg = " ".join(x for x in msg.split(" ") if not re.match("https*://", x))
-    speak(msg)
+    speak(msg[:80])
 
 
 def debug_notifications(bus, msg):
