@@ -1,4 +1,5 @@
 import html
+import re
 from subprocess import run
 
 import dbus
@@ -17,6 +18,8 @@ def speak_notifications(bus, msg):
     if not msg:
         msg = summary
     msg = html.unescape(msg)
+    # remove urls as they're annoying
+    msg = " ".join(x for x in msg.split(" ") if not re.match("https*://", x))
     speak(msg)
 
 
